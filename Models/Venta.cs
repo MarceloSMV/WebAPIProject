@@ -19,9 +19,6 @@ public class Venta
     [Column("id_producto")]
     public int ProductoId { get; set; }
     public Producto? Producto { get; set; }
-
-    [Column("cantidad")]
-    public double Cantidad { get; set; }
     
     [Column("cantidad", TypeName = "decimal(10,2)")]
     public decimal Cantidad { get; set; }
