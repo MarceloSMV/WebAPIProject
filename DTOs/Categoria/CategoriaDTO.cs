@@ -1,0 +1,6 @@
+namespace WebAPIProject.DTOs.Categoria;
+public class CategoriaDTO
+{
+    public int Id { get; set; }
+    public string Descripcion { get; set; } = string.Empty;
+}
