@@ -17,4 +17,20 @@ public class FacturaRepository : GenericRepository<Factura>, IFacturaRepository
             .Include(t => t.Ventas)
             .FirstOrDefaultAsync(t => t.Id == id);
     }
+
+    public async Task<Factura?> GetByIdWithDetailsAsync(int id)
+    {
+        return await _dbSet
+            .Include(t => t.Cliente)
+            .FirstOrDefaultAsync(t => t.Id == id);
+    }
+
+    public async Task<IEnumerable<Factura>> GetAllWithDetailsAsync()
+    {
+        return await _context.Facturas
+            .Include(f => f.Cliente)
+            .ToListAsync();
+    }
+
+
 }
