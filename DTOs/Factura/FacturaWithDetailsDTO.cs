@@ -1,7 +1,7 @@
 using WebAPIProject.DTOs.Cliente;
 
 namespace WebAPIProject.DTOs.Factura;
-public class FacturaWithDetails
+public class FacturaWithDetailsDTO
 {
     public int Id { get; set; }
     public DateTime Fecha { get; set; }

@@ -2,7 +2,7 @@ using WebAPIProject.DTOs.Factura;
 using WebAPIProject.DTOs.Producto;
 
 namespace WebAPIProject.DTOs.Venta;
-public class VentaWithDetails
+public class VentaWithDetailsDTO
 {
     public int Id { get; set; }
     public int FacturaId { get; set; }
