@@ -22,6 +22,8 @@ public class FacturaService : IFacturaService
     public async Task<FacturaDTO?> GetByIdAsync(int id)
     {
         var factura = await _facturaRepository.GetByIdAsync(id);
+        if (factura == null) return null;
+
         return _mapper.Map<FacturaDTO>(factura);
     }
     public async Task<IEnumerable<FacturaWithDetailsDTO>> GetAllWithDetailsAsync()
@@ -32,6 +34,8 @@ public class FacturaService : IFacturaService
     public async Task<FacturaWithDetailsDTO?> GetByIdWithDetailsAsync(int id)
     {
         var factura = await _facturaRepository.GetByIdWithDetailsAsync(id);
+        if (factura == null) return null;
+
         return _mapper.Map<FacturaWithDetailsDTO>(factura);
     }
 
