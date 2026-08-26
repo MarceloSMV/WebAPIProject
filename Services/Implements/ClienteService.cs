@@ -20,7 +20,7 @@ public class ClienteService : IClienteService
     // GET
     public async Task<IEnumerable<ClienteDTO>> GetAllAsync()
     {
-        var clientes = _clienteRepository.GetAllAsync();
+        var clientes = await _clienteRepository.GetAllAsync();
         return _mapper.Map<IEnumerable<ClienteDTO>>(clientes);
     }
 

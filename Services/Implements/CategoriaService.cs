@@ -47,8 +47,8 @@ public class CategoriaService : ICategoriaService
         await _categoriaRepository.SaveChangesAsync();
 
         return _mapper.Map<CategoriaDTO>(categoria);
-
     }
+    
     public async Task<bool> UpdateAsync(int id, CategoriaCreateUpdateDTO dto)
     {
         var categoriaExistente = await _categoriaRepository.GetByIdAsync(id);
